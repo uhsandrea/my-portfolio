@@ -1,38 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
 .App {
-  text-align: center;
+  width: 100vw;
+  background-color: #2e3e59;
+  color: #bec1df;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-bar {
+  width: 25vw;
+  height: 100vh;
+  background-color: #182946;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  position: fixed;
+  top: 0px;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-bar li {
+  border-bottom: solid 1px rgba(190, 193, 223, 0.4);
+  width: 16vw;
+  padding: 3em 0 1em 0;
+  text-align: end;
+  text-transform: uppercase;
+  font-size: 0.9em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-bar li .nav-link {
+  text-decoration: none;
+  color: rgba(190, 193, 223, 0.5);
+  font-weight: 800;
 }
+
+.nav-bar li .nav-link:visited {
+  color: inherit;
+}
+
+.nav-bar li .active {
+  color: #bec1df;
+}
+
+section {
+  padding: 10vh 0 10vh 25vw;
+}
+
+.home-container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home-container h1 {
+  text-align: right;
+  font-size: 3em;
+}
+
+.home-container h2 {
+  text-align: right;
+  font-size: 1.9em;
+}
+
+.home-container .home-msg div {
+  text-align: right;
+  margin-top: 1.9em;
+}
+
+.home-container .home-msg div .button {
+  padding: 0.5em 0.8em;
+  margin-left: 1.5em;
+  font-size: 1em;
+  font-weight: 800;
+  border-radius: 1.5em;
+  border: solid 2px #bec1df;
+  text-decoration: none;
+  -webkit-transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.home-container .home-msg div .button:visited {
+  color: inherit;
+}
+
+.home-container .home-msg div .button:hover {
+  background-color: #bec1df;
+  color: #182946;
+}
+
+.home-container img {
+  width: 35%;
+  border-radius: 50%;
+  margin-left: 4em;
+}
+/*# sourceMappingURL=App.css.map */
