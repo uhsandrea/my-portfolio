@@ -9,14 +9,14 @@
 
 .App {
   width: 100vw;
-  background-color: #2e3e59;
-  color: #bec1df;
+  background-color: #222222;
+  color: #ffffff;
 }
 
 .nav-bar {
-  width: 10em;
+  width: 10rem;
   height: 100vh;
-  background-color: #182946;
+  background-color: #080808;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,13 +36,13 @@
 }
 
 .nav-bar li {
-  height: 8em;
+  height: 8rem;
   width: 100%;
 }
 
 .nav-bar li .nav-link {
   text-decoration: none;
-  color: rgba(190, 193, 223, 0.5);
+  color: rgba(255, 255, 255, 0.5);
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -64,12 +64,12 @@
 }
 
 .nav-bar li .nav-link .icon {
-  font-size: 2.5em;
-  margin-bottom: 0.1em;
+  font-size: 2.5rem;
+  margin-bottom: 0.1rem;
 }
 
 .nav-bar li .nav-link .icon.about {
-  margin-bottom: 0.2em;
+  margin-bottom: 0.2rem;
 }
 
 .nav-bar li .nav-link span {
@@ -77,12 +77,12 @@
 }
 
 .nav-bar li .active {
-  background-color: #2e3e59;
-  color: #bec1df;
+  background-color: #222222;
+  color: #ffffff;
 }
 
 section {
-  padding-left: 10em;
+  padding-left: 10rem;
   height: 100vh;
 }
 
@@ -107,24 +107,24 @@ section {
 }
 
 .home-container .home-msg h1 {
-  font-size: 3.3em;
+  font-size: 3.3rem;
 }
 
 .home-container .home-msg h2 {
-  font-size: 2.2em;
+  font-size: 2.2rem;
 }
 
 .home-container .home-msg div {
-  margin-top: 1.9em;
+  margin-top: 1.9rem;
 }
 
 .home-container .home-msg div .button {
-  padding: 0.5em 0.8em;
-  margin-left: 1.5em;
+  padding: 0.5rem 0.8rem;
+  margin-left: 1.5rem;
   font-weight: 800;
   color: inherit;
-  border-radius: 1.5em;
-  border: solid 2px #bec1df;
+  border-radius: 1.5rem;
+  border: solid 2px #ffffff;
   text-decoration: none;
   -webkit-transition: background-color 0.5s, color 0.5s;
   transition: background-color 0.5s, color 0.5s;
@@ -135,13 +135,59 @@ section {
 }
 
 .home-container .home-msg div .button:hover {
-  background-color: #bec1df;
-  color: #182946;
+  background-color: #ffffff;
+  color: #080808;
 }
 
 .home-container img {
-  width: 25em;
+  width: 25rem;
   border-radius: 50%;
-  margin-left: 5em;
+  margin-left: 5rem;
+}
+
+.about-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-container .aboutme {
+  width: 60%;
+  margin-bottom: 3rem;
+}
+
+.about-container .aboutme h1 {
+  font-size: 2.7rem;
+  margin-bottom: 2rem;
+}
+
+.about-container .skills {
+  width: 60%;
+}
+
+.about-container .skills h2 {
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-container .skills div span {
+  display: inline-block;
+  background-color: #e4e4e4;
+  color: #080808;
+  font-weight: 800;
+  padding: 0.4rem;
+  border-radius: 0.7rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.6rem;
 }
 /*# sourceMappingURL=App.css.map */

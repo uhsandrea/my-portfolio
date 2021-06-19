@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 
-$light-blue: #2e3e59;
-$dark-blue: #182946;
-$white-purple: #bec1df;
+$light-dark: #222222;
+$dark: #080808;
+$white: #ffffff;
 
 @mixin flex-box($dir: row, $jc: center, $ai: center) {
   display: flex;
@@ -20,26 +20,26 @@ $white-purple: #bec1df;
 
 .App {
   width: 100vw;
-  background-color: $light-blue;
-  color: $white-purple;
+  background-color: $light-dark;
+  color: $white;
 }
 
 .nav-bar {
-  width: 10em;
+  width: 10rem;
   height: 100vh;
-  background-color: $dark-blue;
+  background-color: $dark;
   @include flex-box(column);
   list-style: none;
   position: fixed;
   top: 0px;
 
   li {
-    height: 8em;
+    height: 8rem;
     width: 100%;
 
     .nav-link {
       text-decoration: none;
-      color: rgba($white-purple, 0.5);
+      color: rgba($white, 0.5);
       height: 100%;
       @include flex-box(column);
 
@@ -48,12 +48,12 @@ $white-purple: #bec1df;
       }
 
       .icon {
-        font-size: 2.5em;
-        margin-bottom: 0.1em;
+        font-size: 2.5rem;
+        margin-bottom: 0.1rem;
       }
 
       .icon.about {
-        margin-bottom: 0.2em;
+        margin-bottom: 0.2rem;
       }
 
       span {
@@ -62,14 +62,14 @@ $white-purple: #bec1df;
     }
 
     .active {
-      background-color: $light-blue;
-      color: $white-purple;
+      background-color: $light-dark;
+      color: $white;
     }
   }
 }
 
 section {
-  padding-left: 10em;
+  padding-left: 10rem;
   height: 100vh;
 }
 
@@ -80,23 +80,23 @@ section {
     text-align: right;
 
     h1 {
-      font-size: 3.3em;
+      font-size: 3.3rem;
     }
 
     h2 {
-      font-size: 2.2em;
+      font-size: 2.2rem;
     }
 
     div {
-      margin-top: 1.9em;
+      margin-top: 1.9rem;
 
       .button {
-        padding: 0.5em 0.8em;
-        margin-left: 1.5em;
+        padding: 0.5rem 0.8rem;
+        margin-left: 1.5rem;
         font-weight: 800;
         color: inherit;
-        border-radius: 1.5em;
-        border: solid 2px $white-purple;
+        border-radius: 1.5rem;
+        border: solid 2px $white;
         text-decoration: none;
         transition: background-color 0.5s, color 0.5s;
 
@@ -105,16 +105,50 @@ section {
         }
 
         &:hover {
-          background-color: $white-purple;
-          color: $dark-blue;
+          background-color: $white;
+          color: $dark;
         }
       }
     }
   }
 
   img {
-    width: 25em;
+    width: 25rem;
     border-radius: 50%;
-    margin-left: 5em;
+    margin-left: 5rem;
+  }
+}
+
+.about-container {
+  @include flex-box(column);
+
+  .aboutme {
+    width: 60%;
+    margin-bottom: 3rem;
+
+    h1 {
+      font-size: 2.7rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .skills {
+    width: 60%;
+
+    h2 {
+      font-size: 1.7rem;
+      margin-bottom: 1.5rem;
+    }
+
+    div span {
+      display: inline-block;
+      background-color: rgb(228, 228, 228);
+      color: $dark;
+      font-weight: 800;
+      padding: 0.4rem;
+      border-radius: 0.7rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.6rem;
+    }
   }
 }
