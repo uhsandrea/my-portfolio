@@ -15,6 +15,7 @@ function App() {
         <Route path="/about" component={About} />
         <Route path="/projects" component={Projects} />
         <Route path="/contact" component={Contact} />
+        
       </HashRouter>
     </div>
   );

@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 * {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 .App {
@@ -14,7 +14,7 @@
 }
 
 .nav-bar {
-  width: 25vw;
+  width: 10em;
   height: 100vh;
   background-color: #182946;
   display: -webkit-box;
@@ -36,34 +36,57 @@
 }
 
 .nav-bar li {
-  border-bottom: solid 1px rgba(190, 193, 223, 0.4);
-  width: 16vw;
-  padding: 3em 0 1em 0;
-  text-align: end;
-  text-transform: uppercase;
-  font-size: 0.9em;
+  height: 8em;
+  width: 100%;
 }
 
 .nav-bar li .nav-link {
   text-decoration: none;
   color: rgba(190, 193, 223, 0.5);
-  font-weight: 800;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nav-bar li .nav-link:visited {
   color: inherit;
 }
 
+.nav-bar li .nav-link .icon {
+  font-size: 2.5em;
+  margin-bottom: 0.1em;
+}
+
+.nav-bar li .nav-link .icon.about {
+  margin-bottom: 0.2em;
+}
+
+.nav-bar li .nav-link span {
+  font-weight: 800;
+}
+
 .nav-bar li .active {
+  background-color: #2e3e59;
   color: #bec1df;
 }
 
 section {
-  padding: 10vh 0 10vh 25vw;
+  padding-left: 10em;
+  height: 100vh;
 }
 
 .home-container {
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,26 +102,27 @@ section {
           align-items: center;
 }
 
-.home-container h1 {
+.home-container .home-msg {
   text-align: right;
-  font-size: 3em;
 }
 
-.home-container h2 {
-  text-align: right;
-  font-size: 1.9em;
+.home-container .home-msg h1 {
+  font-size: 3.3em;
+}
+
+.home-container .home-msg h2 {
+  font-size: 2.2em;
 }
 
 .home-container .home-msg div {
-  text-align: right;
   margin-top: 1.9em;
 }
 
 .home-container .home-msg div .button {
   padding: 0.5em 0.8em;
   margin-left: 1.5em;
-  font-size: 1em;
   font-weight: 800;
+  color: inherit;
   border-radius: 1.5em;
   border: solid 2px #bec1df;
   text-decoration: none;
@@ -116,8 +140,8 @@ section {
 }
 
 .home-container img {
-  width: 35%;
+  width: 25em;
   border-radius: 50%;
-  margin-left: 4em;
+  margin-left: 5em;
 }
 /*# sourceMappingURL=App.css.map */

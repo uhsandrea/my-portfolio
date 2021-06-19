@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 
 $light-blue: #2e3e59;
 $dark-blue: #182946;
@@ -15,7 +15,7 @@ $white-purple: #bec1df;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 .App {
@@ -25,7 +25,7 @@ $white-purple: #bec1df;
 }
 
 .nav-bar {
-  width: 25vw;
+  width: 10em;
   height: 100vh;
   background-color: $dark-blue;
   @include flex-box(column);
@@ -34,75 +34,87 @@ $white-purple: #bec1df;
   top: 0px;
 
   li {
-    border-bottom: solid 1px rgba($white-purple, 0.4);
-    width: 16vw;
-    padding: 3em 0 1em 0;
-    text-align: end;
-    text-transform: uppercase;
-    font-size: 0.9em;
+    height: 8em;
+    width: 100%;
 
     .nav-link {
       text-decoration: none;
       color: rgba($white-purple, 0.5);
-      font-weight: 800;
+      height: 100%;
+      @include flex-box(column);
 
       &:visited {
         color: inherit;
       }
+
+      .icon {
+        font-size: 2.5em;
+        margin-bottom: 0.1em;
+      }
+
+      .icon.about {
+        margin-bottom: 0.2em;
+      }
+
+      span {
+        font-weight: 800;
+      }
     }
 
     .active {
+      background-color: $light-blue;
       color: $white-purple;
     }
   }
 }
 
 section {
-  padding: 10vh 0 10vh 25vw;
+  padding-left: 10em;
+  height: 100vh;
 }
 
 .home-container {
-  height: 100vh;
   @include flex-box();
 
-  h1 {
+  .home-msg {
     text-align: right;
-    font-size: 3em;
-  }
 
-  h2 {
-    text-align: right;
-    font-size: 1.9em;
-  }
+    h1 {
+      font-size: 3.3em;
+    }
 
-  .home-msg div {
-    text-align: right;
-    margin-top: 1.9em;
+    h2 {
+      font-size: 2.2em;
+    }
 
-    .button {
-      padding: 0.5em 0.8em;
-      margin-left: 1.5em;
-      font-size: 1em;
-      font-weight: 800;
-      border-radius: 1.5em;
-      border: solid 2px $white-purple;
-      text-decoration: none;
-      transition: background-color 0.5s, color 0.5s;
+    div {
+      margin-top: 1.9em;
 
-      &:visited {
+      .button {
+        padding: 0.5em 0.8em;
+        margin-left: 1.5em;
+        font-weight: 800;
         color: inherit;
-      }
+        border-radius: 1.5em;
+        border: solid 2px $white-purple;
+        text-decoration: none;
+        transition: background-color 0.5s, color 0.5s;
 
-      &:hover {
-        background-color: $white-purple;
-        color: $dark-blue;
+        &:visited {
+          color: inherit;
+        }
+
+        &:hover {
+          background-color: $white-purple;
+          color: $dark-blue;
+        }
       }
     }
   }
 
   img {
-    width: 35%;
+    width: 25em;
     border-radius: 50%;
-    margin-left: 4em;
+    margin-left: 5em;
   }
 }
