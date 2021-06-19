@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const About = () => {
-  const [skills, setSkills] = useState(
-    ["HTML5", "CSS3/SASS", "JavasSript", "JSON", "React JS", "Redux", "Light Python/Flask", "Git/GitHub", "Responsive Web Design"]
-  );
+  const skills = ["HTML5", "CSS3/SASS", "JavasSript", "JSON", "React JS", "Redux", "Light Python/Flask", "Git/GitHub", "Responsive Web Design"];
 
   return (
     <section className="about-container">
@@ -22,7 +20,7 @@ const About = () => {
         <h2>My Skills</h2>
         <div>
           {skills.map(skill => {
-            return <span>{skill}</span>
+            return <span key={skills.indexOf(skill)}>{skill}</span>
           })}
         </div>
       </div>

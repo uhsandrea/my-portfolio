@@ -42,7 +42,7 @@
 
 .nav-bar li .nav-link {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.7);
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -189,5 +189,13 @@ section {
   border-radius: 0.7rem;
   margin-right: 0.5rem;
   margin-bottom: 0.6rem;
+}
+
+.mode {
+  position: fixed;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  font-size: 2.5rem;
+  cursor: pointer;
 }
 /*# sourceMappingURL=App.css.map */
