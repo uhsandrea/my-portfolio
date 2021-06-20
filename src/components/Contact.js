@@ -1,12 +1,13 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
 import { FaGithub } from 'react-icons/fa';
+import keys from '../keys';
 
 const Contact = () => {
   const sendEmail = e => {
     e.preventDefault();
 
-    emailjs.sendForm('service_mqh5skq', 'template_8r96ckn', e.target, 'user_DkPltbK5lDlyGL6KeC6Fu')
+    emailjs.sendForm(keys.SERVICE_ID, keys.TEMPLATE_ID, e.target, keys.USER_ID)
       .then((result) => {
           console.log(result.text);
       }, (error) => {
