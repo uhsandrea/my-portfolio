@@ -7,8 +7,8 @@ const Home = () => {
     <section className="home-container">
       <div className="home-msg">
         <h1>Hello World!</h1>
-        <h2>I am Andrea Chong.</h2>
-        <h2>Front-End Deveopler.</h2>
+        <h2>I am Andrea Chong,</h2>
+        <h3>Front-End Develope.</h3>
         <div>
           <a href={cat} target="_blank" download="Resume.jpg" rel="noreferrer" className="button">Resume</a>
           <NavLink to="/projects" className="button">Projects</NavLink>
