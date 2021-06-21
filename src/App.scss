@@ -24,6 +24,7 @@ $font-color: #ffffff;
   color: $font-color;
 }
 
+//Nav Bar
 .nav-bar {
   width: 10rem;
   height: 100vh;
@@ -73,7 +74,7 @@ section {
   padding-left: 10rem;
   height: 100vh;
 }
-
+// Home
 .home-container {
   @include flex-box();
 
@@ -126,6 +127,7 @@ section {
   }
 }
 
+// About
 .about-container {
   @include flex-box(column);
 
@@ -134,7 +136,7 @@ section {
     margin-bottom: 3rem;
 
     h1 {
-      font-size: 2.4rem;
+      font-size: 2.2rem;
       margin-bottom: 2rem;
     }
   }
@@ -160,9 +162,116 @@ section {
   }
 }
 
+// Projects
 .projects-container {
+  height: 100%;
+
+  h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    padding-top: 4rem;
+  }
+  .projects-grid {
+    padding: 3rem 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 25rem);
+    grid-auto-rows: 18rem;
+    grid-gap: 1rem 4rem;
+    justify-content: center;
+
+    .project {
+      @include flex-box(column, space-around);
+
+      .project-preview {
+        position: relative;
+
+        img {
+          width: 25rem;
+          height: 15rem;
+          border-radius: 1.5rem;
+        }
+
+        .project-description {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          display: none;
+
+          h4 {
+            width: 70%;
+            text-align: center;
+            margin-bottom: 1.6rem;
+          }
+
+          a {
+            display: inline-block;
+            text-decoration: none;
+            border: 2px solid $font-color;
+            border-radius: 1.5rem;
+            width: 4.3rem;
+            padding: 0.3rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+            margin: 0 0.4rem;
+            transition: background-color 0.5s, color 0.5s;
+
+            &:visited {
+              color: inherit;
+            }
+
+            &:hover {
+              background-color: $font-color;
+              color: $nav-bg;
+              font-weight: 800;
+            }
+          }
+        }
+
+        &:hover {
+          img {
+            transition: 0.2s;
+            filter: brightness(13%);
+          }
+
+          .project-description {
+            display: block;
+            @include flex-box(column);
+          }
+        }
+      }
+
+      h3 {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  .additional {
+    text-align: center;
+  }
+
+  .additional-icons {
+    @extend .additional;
+    font-size: 2.5rem;
+
+    a:hover {
+      .icon {
+        transform: scale(1.2);
+      }
+    }
+
+    a:visited {
+      color: inherit;
+    }
+
+    .icon {
+      margin: 1rem 0.6rem 4rem 0.6rem;
+    }
+  }
 }
 
+// Contact
 .contact-container {
   @include flex-box(column);
 
@@ -228,12 +337,14 @@ section {
   }
 }
 
+// Footer
 .footer {
   padding-left: 10rem;
   height: 3.5rem;
   background-color: $nav-bg;
 }
 
+// Mode
 .mode {
   position: fixed;
   right: 0.6rem;
@@ -246,3 +357,5 @@ section {
     transform: rotate(180deg);
   }
 }
+
+// Responsive
