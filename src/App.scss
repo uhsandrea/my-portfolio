@@ -38,7 +38,7 @@ $font-color: #ffffff;
     height: 8rem;
     width: 100%;
 
-    .nav-link {
+    .nav__link {
       text-decoration: none;
       color: rgba($font-color, 0.7);
       height: 100%;
@@ -58,7 +58,6 @@ $font-color: #ffffff;
       }
 
       span {
-        font-weight: 800;
         font-size: 0.95rem;
       }
     }
@@ -74,11 +73,12 @@ section {
   padding-left: 10rem;
   height: 100vh;
 }
+
 // Home
 .home-container {
   @include flex-box();
 
-  .home-msg {
+  .home-text {
     text-align: right;
 
     h1 {
@@ -96,10 +96,9 @@ section {
     div {
       margin-top: 1.5rem;
 
-      .button {
+      .home__button {
         padding: 0.4rem 0.7rem;
         margin-left: 1rem;
-        font-weight: 800;
         font-size: 0.9rem;
         color: inherit;
         border-radius: 1.5rem;
@@ -120,7 +119,7 @@ section {
     }
   }
 
-  img {
+  .home__img {
     width: 25rem;
     border-radius: 50%;
     margin-left: 5rem;
@@ -131,7 +130,7 @@ section {
 .about-container {
   @include flex-box(column);
 
-  .aboutme {
+  .about-me {
     width: 60%;
     margin-bottom: 3rem;
 
@@ -141,7 +140,7 @@ section {
     }
   }
 
-  .skills {
+  .about-skills {
     width: 60%;
 
     h2 {
@@ -152,8 +151,7 @@ section {
       display: inline-block;
       background-color: rgb(228, 228, 228);
       color: $nav-bg;
-      font-weight: 800;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       padding: 0.4rem;
       border-radius: 0.7rem;
       margin-right: 0.5rem;
@@ -179,10 +177,10 @@ section {
     grid-gap: 1rem 4rem;
     justify-content: center;
 
-    .project {
+    .projects__project {
       @include flex-box(column, space-around);
 
-      .project-preview {
+      .project__preview {
         position: relative;
 
         img {
@@ -191,14 +189,14 @@ section {
           border-radius: 1.5rem;
         }
 
-        .project-description {
+        .project__preview--hover {
           position: absolute;
           top: 0;
           width: 100%;
           height: 100%;
           display: none;
 
-          h4 {
+          .project__description {
             width: 70%;
             text-align: center;
             margin-bottom: 1.6rem;
@@ -215,6 +213,7 @@ section {
             font-size: 0.9rem;
             margin: 0 0.4rem;
             transition: background-color 0.5s, color 0.5s;
+            color: inherit;
 
             &:visited {
               color: inherit;
@@ -223,7 +222,6 @@ section {
             &:hover {
               background-color: $font-color;
               color: $nav-bg;
-              font-weight: 800;
             }
           }
         }
@@ -234,39 +232,39 @@ section {
             filter: brightness(13%);
           }
 
-          .project-description {
+          .project__preview--hover {
             display: block;
             @include flex-box(column);
           }
         }
       }
 
-      h3 {
+      .project__name {
         font-size: 1.25rem;
       }
     }
   }
 
-  .additional {
+  .projects-additional {
     text-align: center;
   }
 
-  .additional-icons {
-    @extend .additional;
+  .additional__links {
+    @extend .projects-additional;
     font-size: 2.5rem;
 
+    a {
+      color: inherit;
+      display: inline-block;
+      margin: 1rem 0.6rem 4rem 0.6rem;
+    }
+
     a:hover {
-      .icon {
-        transform: scale(1.2);
-      }
+      transform: scale(1.2);
     }
 
     a:visited {
       color: inherit;
-    }
-
-    .icon {
-      margin: 1rem 0.6rem 4rem 0.6rem;
     }
   }
 }
@@ -284,31 +282,21 @@ section {
   .contact-form {
     position: relative;
     width: 35rem;
-    height: 60%;
+    height: 65%;
     @include flex-box(column);
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 2rem;
 
-    a {
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      font-size: 2rem;
-
-      &:visited {
-        color: inherit;
-      }
-    }
-
     .input {
       background-color: transparent;
-      width: 60%;
+      width: 65%;
       color: $font-color;
       border: none;
       border-bottom: 2px solid rgba($font-color, 0.4);
       margin-bottom: 0.8rem;
       padding: 0.5rem 0.8rem;
       outline: none;
+      font-size: 1rem;
 
       &:focus {
         border-bottom: 1px solid $font-color;
@@ -318,14 +306,15 @@ section {
     textarea {
       @extend .input;
       height: 7em;
-      margin-bottom: 2rem;
+      margin-bottom: 1.8rem;
     }
 
-    .btn {
+    .form__btn {
       background-color: transparent;
       border: 2px solid rgba($font-color, 0.4);
       border-radius: 1.5rem;
       color: rgba($font-color, 0.4);
+      font-size: 0.8rem;
       padding: 0.5rem;
       transition: background-color 0.5s, color 0.5s;
 
@@ -338,23 +327,25 @@ section {
 }
 
 // Footer
-.footer {
-  padding-left: 10rem;
+footer {
+  padding: 0 10rem 0 20rem;
   height: 3.5rem;
-  background-color: $nav-bg;
+  color: rgba($font-color, 0.5);
+  font-size: 0.8rem;
+  @include flex-box();
+  background-color: rgba($nav-bg, 0.22);
 }
 
 // Mode
 .mode {
   position: fixed;
-  right: 0.6rem;
-  bottom: 0.6rem;
-  font-size: 2.3rem;
-  cursor: pointer;
-  transition: transform 0.7s ease-in-out;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.7rem;
 
   &:hover {
-    transform: rotate(180deg);
+    font-size: 2rem;
+    cursor: pointer;
   }
 }
 

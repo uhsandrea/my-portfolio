@@ -5,18 +5,18 @@ const About = () => {
 
   return (
     <section className="about-container">
-      <div className="aboutme">
+      <div className="about-me">
         <h1>About Me</h1>
-        <h4>
+        <div>
           Hi! I am a self-taught front-end developer with solid foundation.
           I want to learn and gain real-world experience.
           I am looking for any opportunity of entry level/junior front-end web developer position and 
           ready to grow from the bottom to become a professional web developer.
           <br /><br />
           I will love to hear from you. Feel free to contact me.
-        </h4>
+        </div>
       </div>
-      <div className="skills">
+      <div className="about-skills">
         <h2>My Skills</h2>
         <ul>
           {skills.map(skill => {

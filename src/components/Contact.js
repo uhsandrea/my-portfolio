@@ -1,6 +1,5 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
-import { FaGithub } from 'react-icons/fa';
 import keys from '../keys';
 
 const Contact = () => {
@@ -21,12 +20,11 @@ const Contact = () => {
     <section className="contact-container">
       <h1>Contact Me</h1>
       <form className="contact-form" onSubmit={sendEmail}>
-        <a href="https://github.com/uhsandrea" target="_blank" rel="noreferrer"><FaGithub /></a>
         <input type="text" name="name" placeholder="Name" required className="input" />
         <input type="email" name="email" placeholder="Email" required className="input" />
         <input type="text" name="subject" placeholder="Subject" required className="input" />
         <textarea name="message" placeholder="Message" required />
-        <input type="submit" value="Send Message" className="btn" />
+        <input type="submit" value="Send Message" className="form__btn" />
       </form>
     </section>
   );

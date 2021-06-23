@@ -17,26 +17,26 @@ const Projects = () => {
       <h1>My Projects</h1>
       <div className="projects-grid">
         {projects.map(project => {
-          return <div key={project.id} className="project">
-            <div className="project-preview">
+          return <div key={project.id} className="projects__project">
+            <div className="project__preview">
               <img src={project.img} alt="img"/>
-              <div className="project-description">
-                <h4>{project.description}</h4>
+              <div className="project__preview--hover">
+                <div className="project__description">{project.description}</div>
                 <div>
                   <a href={project.live} target="_blank" rel="noreferrer">Live</a>
                   <a href={project.code} target="_blank" rel="noreferrer">Code</a>
                 </div>
               </div>
             </div>
-            <h3>{project.name}</h3>
+            <div className="project__name">{project.name}</div>
           </div>
         })}
       </div>
-      <h2 className="additional">More practices and mini projects are also available:</h2>
-      <div className="additional-icons">
-        <a href="https://github.com/uhsandrea" target="_blank" rel="noreferrer"><SiGithub className="icon" /></a>
-        <a href="https://replit.com/@uhsandrea" target="_blank" rel="noreferrer"><SiReplDotIt className="icon" /></a>
-        <a href="https://codesandbox.io/u/uhsandrea" target="_blank" rel="noreferrer"><SiCodesandbox className="icon" /></a>
+      <h2 className="projects-additional">More practices and mini projects are also available:</h2>
+      <div className="additional__links">
+        <a href="https://github.com/uhsandrea" target="_blank" rel="noreferrer"><SiGithub /></a>
+        <a href="https://replit.com/@uhsandrea" target="_blank" rel="noreferrer"><SiReplDotIt /></a>
+        <a href="https://codesandbox.io/u/uhsandrea" target="_blank" rel="noreferrer"><SiCodesandbox /></a>
       </div>
     </section>
   );
