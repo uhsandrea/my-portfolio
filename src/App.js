@@ -5,7 +5,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import Mode from './components/Mode';
+import Theme from './components/Theme';
 import Footer from './components/Footer';
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
         <Route path="/projects" component={Projects} />
         <Route path="/contact" component={Contact} />
         <Footer />
-        <Mode />
+        <Theme />
       </HashRouter>
     </div>
   );
