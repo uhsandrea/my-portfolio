@@ -7,6 +7,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Theme from './components/Theme';
 import Footer from './components/Footer';
+import Hamburger from './components/Hamburger';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/contact" component={Contact} />
         <Footer />
         <Theme />
+        <Hamburger />
       </HashRouter>
     </div>
   );
