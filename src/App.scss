@@ -355,12 +355,11 @@ footer {
 // Theme
 .theme {
   position: fixed;
-  right: 1rem;
-  top: 1rem;
-  font-size: 1.7rem;
+  right: 0.9rem;
+  top: 0.9rem;
+  font-size: 1.9rem;
 
   &:hover {
-    transform: scale(1.4);
     cursor: pointer;
   }
 }
@@ -368,10 +367,19 @@ footer {
 // Hamburger
 .hamburger {
   position: fixed;
-  right: 1rem;
-  top: 1rem;
-  font-size: 1.7rem;
+  right: 1.2rem;
+  top: 0.8rem;
   display: none;
+
+  span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--font-color);
+  }
 }
 
 // Responsive
@@ -518,8 +526,9 @@ footer {
 
 @media screen and (max-width: 750px) {
   .theme {
-    right: 3.2rem;
+    left: 0.9rem;
     z-index: 10;
+    width: 2rem;
   }
 
   .hamburger {
@@ -527,19 +536,32 @@ footer {
     z-index: 10;
 
     &:hover {
-      transform: scale(1.4);
       cursor: pointer;
     }
   }
 
-  .nav-bar {
-    right: 0;
-    z-index: 5;
-    display: none;
+  .hamburger.active {
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
   }
 
-  .active {
-    display: flex;
+  .nav-bar {
+    right: -10rem;
+    z-index: 5;
+    transition: 0.3s;
+  }
+
+  .nav-bar.active {
+    right: 0;
   }
 
   section {
