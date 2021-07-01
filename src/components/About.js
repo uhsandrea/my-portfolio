@@ -4,7 +4,7 @@ const About = () => {
   const skills = ["HTML5", "CSS3/SASS", "JavasSript", "JSON", "React JS", "Redux", "Light Python/Flask", "Git/GitHub", "Responsive Web Design"];
 
   return (
-    <section className="about-container">
+    <section id="about" className="about-container">
       <div className="about-me">
         <h1>About Me</h1>
         <div>

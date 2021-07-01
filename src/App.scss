@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 
-$light-dark: #4a9179; /* #222222 364854 47527e 483742 */
-$strong-dark: #0a332e; /* #080808 223947 2c3868 212025 */
-$white: #d3f8f4; /* #f0f0f0 dce8e5 d0fae1 e3d9bd */
-$dark-white: #97cfbc; /* rgb(219, 219, 219) b8c9c5 add4bd 94866f */
+$light-dark: #4a9179; /* 4a9179 47527e */
+$strong-dark: #0a332e; /* 0a332e 2c3868 */
+$white: #d3f8f4; /* d3f8f4 d0fae1 */
+$dark-white: #97cfbc; /* 97cfbc add4bd */
 
 :root {
   --main-bg: #{$strong-dark};
@@ -63,10 +63,7 @@ $dark-white: #97cfbc; /* rgb(219, 219, 219) b8c9c5 add4bd 94866f */
       height: 100%;
       @include flex-box(column);
       color: inherit;
-
-      &:visited {
-        color: inherit;
-      }
+      cursor: pointer;
 
       .icon {
         font-size: 2.5rem;
@@ -125,6 +122,7 @@ section {
         text-decoration: none;
         display: inline-block;
         transition: background-color 0.5s, color 0.5s;
+        cursor: pointer;
 
         &:visited {
           color: inherit;

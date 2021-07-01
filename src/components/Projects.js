@@ -13,7 +13,7 @@ const Projects = () => {
   ];
 
   return (
-    <section className="projects-container">
+    <section id="projects" className="projects-container">
       <h1>My Projects</h1>
       <div className="projects-grid">
         {projects.map(project => {
