@@ -1,25 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 
-$light-dark: #083d6c; /* #222222 364854 47527e */
-$strong-dark: #012b50; /* #080808 223947 2c3868 */
-$white: #d9f1eb; /* #f0f0f0 dce8e5 d0fae1 */
-$dark-white: #b6ddd4; /* rgb(219, 219, 219) b8c9c5 add4bd */
+$light-dark: #4a9179; /* #222222 364854 47527e 483742 */
+$strong-dark: #0a332e; /* #080808 223947 2c3868 212025 */
+$white: #d3f8f4; /* #f0f0f0 dce8e5 d0fae1 e3d9bd */
+$dark-white: #97cfbc; /* rgb(219, 219, 219) b8c9c5 add4bd 94866f */
 
 :root {
-  --main-bg: #{$light-dark};
-  --nav-bg: #{$strong-dark};
+  --main-bg: #{$strong-dark};
+  --nav-bg: #{$light-dark};
   --font-color: #{$white};
-  --light-font-color: #{rgba($dark-white, 0.5)};
+  --light-font-color: #{rgba($dark-white, 0.8)};
   --proj-font-color: #{$white};
   --proj-btn-hover: #{$strong-dark};
-  --footer-bg: #{rgba($strong-dark, 0.3)};
+  --footer-bg: #{rgba($light-dark, 0.3)};
 }
 
 .light {
   --main-bg: #{$white};
   --nav-bg: #{$dark-white};
   --font-color: #{$strong-dark};
-  --light-font-color: #{rgba($light-dark, 0.6)};
+  --light-font-color: #{rgba($light-dark, 0.8)};
   --footer-bg: #{rgba($dark-white, 0.45)};
 }
 
@@ -84,7 +84,6 @@ $dark-white: #b6ddd4; /* rgb(219, 219, 219) b8c9c5 add4bd */
 
     .nav--active {
       background-color: var(--main-bg);
-      color: var(--font-color);
     }
   }
 }
@@ -133,7 +132,7 @@ section {
 
         &:hover {
           background-color: var(--font-color);
-          color: var(--nav-bg);
+          color: var(--main-bg);
         }
       }
     }
@@ -170,7 +169,7 @@ section {
     ul li {
       display: inline-block;
       background-color: var(--font-color);
-      color: var(--nav-bg);
+      color: var(--main-bg);
       font-size: 0.95rem;
       padding: 0.4rem;
       border-radius: 0.7rem;
@@ -629,7 +628,6 @@ footer {
       width: 80%;
 
       h2 {
-        margin-bottom: 1.5rem;
         font-size: 1.4rem;
       }
 
@@ -741,7 +739,7 @@ footer {
 
       textarea {
         height: 10em;
-        margin-bottom: 1.6rem;
+        margin-bottom: 1.5rem;
       }
     }
   }
