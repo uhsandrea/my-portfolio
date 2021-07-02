@@ -19,7 +19,7 @@ const Projects = () => {
         {projects.map(project => {
           return <div key={project.id} className="projects__project">
             <div className="project__preview">
-              <img src={project.img} alt="img" />
+              <img src={process.env.PUBLIC_URL + project.img} alt="img" />
               <div className="project__preview--hover">
                 <div className="project__description">{project.description}</div>
                 <div>

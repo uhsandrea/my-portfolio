@@ -9,11 +9,11 @@ const Home = () => {
         <h2>I am Andrea Chong,</h2>
         <h3>Front-End Developer.</h3>
         <div>
-          <a href="/images/resume2021.pdf" target="_blank" download="Resume.pdf" rel="noreferrer" className="home__button">Resume</a>
+          <a href={process.env.PUBLIC_URL + "/images/resume2021.pdf"} target="_blank" download="Resume.pdf" rel="noreferrer" className="home__button">Resume</a>
           <Link to="projects" className="home__button" activeClass="nav--active" spy={true} smooth={true} duration={300}>Projects</Link>
         </div>
       </div>
-      <img className="home__img" src="/images/coding-cat.jpeg" alt="cat"/>
+      <img className="home__img" src={process.env.PUBLIC_URL + "/images/coding-cat.jpeg"} alt="cat"/>
     </section>
   );
 }
