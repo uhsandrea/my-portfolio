@@ -4,7 +4,9 @@ Single scrolling page with four sections: Home, About, Projects, and Contact
 
 Fully responsive
 
-Dark and light theme mode
+Dark mode and light mode
+
+npm installations: node-sass, react-icons, react-scroll, emailjs-com
 
 ### Home
 
