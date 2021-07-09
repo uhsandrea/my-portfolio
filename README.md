@@ -1,25 +1,28 @@
 # Portfolio Website by React JS
 
-Single scrolling page with four sections: Home, About, Projects, and Contact
+- Single scrolling page with four sections: Home, About, Projects, and Contact
 
-Fully responsive
+- Fully responsive
 
-Dark mode and light mode
+- Dark mode and light mode
 
-npm installations: node-sass, react-icons, react-scroll, emailjs-com
+## Built with
 
-### Home
+HTML, SASS, JavaScript, React JS
 
-Greeting message with resume link and projects link
+## Install
 
-### About
+```
+npx create-react-app my-portfolio
+npm install node-sass --save
+npm install react-icons --save
+npm install react-scroll
+npm install emailjs-com --save
+```
 
-Introducing myself and my skills
+# Sections
 
-### Projects
-
-Display projects with live demo and codes
-
-### Contact
-
-Email form for contacting me
+- Home: Greeting message with resume link and projects link
+- About: Introducing myself and my skills
+- Projects: Display projects with live demo and codes
+- Contact: Email form for contacting me
