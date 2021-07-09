@@ -20,7 +20,7 @@ npm install react-scroll
 npm install emailjs-com --save
 ```
 
-# Sections
+## Sections
 
 - Home: Greeting message with resume link and projects link
 - About: Introducing myself and my skills
